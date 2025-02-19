@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    border: 100px solid red;
+    width: 800px;
+    height: 800px;
+    border-radius: 40px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100%;
+}
+
+.row {
+    display: flex;
+    flex: 1;
+}
+
+.grid-item {
+    flex: 1;
+    border: 1px solid lightgray;
+    background-color: white;
+}
