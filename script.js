@@ -18,7 +18,7 @@ function createGrid(size) {
             div.classList.add('grid-item');
             div.addEventListener('mouseover', () => {
                 if (isDrawing) {
-                    div.style.backgroundColor = 'black';
+                    div.style.backgroundColor = selectedColor;
                 }
             });
             row.appendChild(div);
@@ -47,5 +47,14 @@ function resetGrid() {
     })
 }
 
+const colorChange = document.querySelector('#color-input');
+let selectedColor = 'black';
+
+function changeColor() {
+    selectedColor = colorChange.value;
+}
+
+
 gridSizeBtn.addEventListener('click', gridSizeIncrease);
 resetBtn.addEventListener('click', resetGrid);
+colorChange.addEventListener('input', changeColor);
